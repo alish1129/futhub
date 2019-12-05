@@ -1,0 +1,15 @@
+.column {
+    padding: 30px;
+}
+
+.cardComponent {
+    text-align: center;
+    height: 400px; 
+}
+
+.thumbnail {
+    padding: 10px;
+    max-height: 200px;
+    max-width: 300px !important;
+    align-self: center;
+}
