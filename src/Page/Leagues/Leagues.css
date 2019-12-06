@@ -1,0 +1,11 @@
+.leaguesPage {
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.card {
+    height: 50px;
+    margin: 10px !important;
+    padding: 30px !important;
+    justify-content: center;
+}

@@ -1,39 +1,30 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import './App.css';
-import axios from 'axios';
-import Row from 'react-bootstrap/Row';
-import Post from './Components/Post/Post';
 import Header from './Components/Header/Header';
+import Home from './Page/Home/Home';
+import Leagues from './Page/Leagues/Leagues';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Highlights from './Page/Highlights/Highlights';
+import MatchHighlight from './Page/MatchHighlight/MatchHighlight'
 
 export default class App extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            matches: [],
         }
     }
-    componentDidMount() {
-        axios.get('https://www.scorebat.com/video-api/v1/')
-        .then(response => {
-            console.log(response.data);
-            this.setState({matches: response.data});
-            return response.data;
-        });
-    }
 
-    render () {
-        const post = this.state.matches.map((match) => {
-           return <Post thumbnail={match.thumbnail} title={match.title} date={match.date} competition={match.competition}/>
-        });
+    render() {
         return (
-            <div className="main">
-                <Header/>
-                <div className="App">
-                    <Row>
-                            {post}
-                    </Row>
-                </div>
-            </div>   
+            <Router>
+                <Header />
+                <Switch>
+                    <Route path="/" exact component={Home} />
+                    <Route path="/home" component={Home} />
+                    <Route path="/highlights" component={Highlights} />
+                    <Route path="/leagues" component={Leagues} />
+                </Switch>
+            </Router>
         );
     }
 }

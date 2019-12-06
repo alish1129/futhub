@@ -1,0 +1,23 @@
+.navbar {
+    background-color: #303030;
+}
+
+.form-control  {
+    background-color: #121212 !important;
+    color: #303030 !important;
+}
+.searchInput::placeholder {
+    margin: 0 !important;
+    background-color: #121212;
+    color: #303030!important;
+}
+
+.searchButton {
+    background-color: #ff0000 !important;
+    color: #303030 !important;
+    font-weight: bolder !important;
+}
+
+.navLink {
+    color: #fff !important;
+}
