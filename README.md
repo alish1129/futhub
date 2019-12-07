@@ -1,3 +1,6 @@
+Futhub is a Sports site that uses APIs from thesportsdb.com and Soccerbat. Futhub is built using React Js. It is not complete yet.
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
